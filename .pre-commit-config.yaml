@@ -27,17 +27,16 @@ repos:
         args: [--fix, --exit-non-zero-on-fix]
       - id: ruff-format
 
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.13.0
+  - repo: local
     hooks:
       - id: mypy
-        files: ^(app|tests)/
-        additional_dependencies:
-          - pydantic
-          - pydantic-settings
-          - types-requests
-          - types-toml
-          - types-jsonschema
+        name: mypy
+        entry: uv run mypy
+        language: system
+        types_or: [python, pyi]
+        files: ^(ldap|tests)/
+        pass_filenames: false
+        require_serial: true
 
   - repo: https://github.com/adrienverge/yamllint
     rev: v1.35.1

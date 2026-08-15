@@ -2,7 +2,7 @@
 
 import pytest
 
-from app.main import main
+from ldap.main import main
 
 
 @pytest.mark.unit

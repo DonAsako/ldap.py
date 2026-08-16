@@ -6,8 +6,6 @@
 
 A LDAP/LDAPS client library written from scratch in Python
 
-**Status:** works on my machine, sometimes. If you put this in front of a production directory, that's on you.
-
 ## Why another LDAP library?
 
 I don't care, that's not the point. I just want to make sure I can still code without AI and actually read an RFC lmao.
